@@ -7,7 +7,7 @@ import DropdownBtn from "./DropdownBtn";
 
 export const SliderContext = createContext();
 
-const Slider = function ({ width, height, type }) {
+const Slider = function ({ type }) {
   const [items, setItems] = useState([]);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
@@ -67,7 +67,6 @@ const Slider = function ({ width, height, type }) {
 
   return (
     <div
-      style={{ width, height }}
       className="card-main slider"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -90,11 +89,6 @@ const Slider = function ({ width, height, type }) {
 Slider.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
-};
-
-Slider.defaultProps = {
-  width: "100%",
-  height: "100%",
 };
 
 export default Slider;

@@ -14,9 +14,12 @@
     flex-wrap: wrap
     justify-content: space-between
     align-items: start
-
     @media screen and ( max-width:  768px)
         justify-content: center
+
+.services-left, .services-right
+    @media screen and ( max-width:  992px)
+        padding: 0 !important
 
 .services-title
     h2
@@ -45,22 +48,10 @@
     background: #FFF
     box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.25)
     margin: 0 0 8% 0
-    &:nth-child(2n)
-        margin: 0 0 0 10%
     @media screen and ( max-width:  1200px)
         min-height: 328px
-    @media screen and ( max-width:  992px)
-        &:nth-child(2n)
-            margin: 0
-    @media screen and ( min-width:  768px)
-        &:nth-last-child(-n+2)
-            margin: 0
     @media screen and ( max-width:  768px)
         margin: 0 0 10% 0
-        &:nth-child(2n)
-            margin: 0 0 10% 0
-        &:last-child
-            margin: 0
 
 .card-main
     display: flex
@@ -102,7 +93,7 @@
 
 .question
     position: absolute
-    right: 8%
+    right: 7%
     top: 2%
     cursor: pointer
     &:hover
@@ -125,15 +116,3 @@
         filter: opacity(0.8)
         transform: scale(0.9) 
 
-// .office-drop
-//     border-radius: 55px
-//     background: #FFF
-//     opacity: 1
-//     box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.25)
-//     transition: .5s
-//     position: absolute
-//     z-index: 10
-//     bottom: -38%
-//     left: 0
-//     transform-origin: 50% 0
-//     transform: scaleY(0)   
