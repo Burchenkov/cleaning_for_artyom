@@ -1,6 +1,6 @@
 import { React, useState } from "react";
-import Image from "react-bootstrap/Image";
-import question from "../../images/main/question.svg";
+// import Image from "react-bootstrap/Image";
+// import question from "../../images/main/question.svg";
 import Slider from "../Slider/Slider";
 import SpinCard from "../SpinCard/SpinCard";
 
@@ -11,15 +11,15 @@ const Services = () => {
         <h2>Наши услуги</h2>
       </div>
       <div className="services-container">
-        <div className="services-left">
+        <div className="left">
           <div className="services-card">
             <div className="card-title">
               <h3>Уборка офиса</h3>
             </div>
             <Slider type="office" />
           </div>
+          <SpinCard />
           <div className="services-card">
-            {/* <Image className="question" src={question} />
             <div className="card-title">
               <h3>
                 Генеральная <br /> уборка
@@ -38,21 +38,12 @@ const Services = () => {
                 <p>Трешка</p>
                 <p>от 5990 руб</p>
               </div>
-            </div> */}
-            <SpinCard />
-          </div>
-          <div className="services-card">
-            <div className="card-title">
-              <h3>Мытье окон</h3>
             </div>
             <Slider type={"add"} />
           </div>
         </div>
-        <div className="services-right">
-          <SpinCard />
-
+        <div className="right">
           <div className="services-card">
-            <Image className="question" src={question} />
             <div className="card-title">
               <h3>Поддерживающая уборка</h3>
             </div>
@@ -71,7 +62,12 @@ const Services = () => {
               </div>
             </div>
           </div>
-
+          <div className="services-card">
+            <div className="card-title">
+              <h3>Мытье окон</h3>
+            </div>
+            <Slider type={"add"} />
+          </div>
           <div className="services-card">
             <div className="card-title">
               <h3>Доп услуги</h3>

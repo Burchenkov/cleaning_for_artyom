@@ -1,114 +1,106 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import Image from "react-bootstrap/Image";
 import question from "../../images/main/question.svg";
-import "../../styles/spincard.sass";
-import ReactCardFlip from "react-card-flip";
 
-class SpinCard extends React.Component {
-  // const [showMessage, setShowMessage] = useState(false);
-  // const nodeRef = useRef(null);
-  // const el = document.getElementById("card-test");
-  // return (
-  //   <>
-  //     <CSSTransition
-  //       in={!showMessage}
-  //       nodeRef={nodeRef}
-  //       timeout={800}
-  //       classNames="front-face"
-  //       unmountOnExit
-  //     >
-  //       <div className="services-card front">
-  //         <Image
-  //           className="question"
-  //           src={question}
-  //           onClick={() => {
-  //             setShowMessage(true);
-  //           }}
-  //         />
-  //         <div id="card-test" className="card-title">
-  //           <h3>
-  //             Уборка после <br /> ремонта
-  //           </h3>
-  //         </div>
-  //         <div className="card-main">
-  //           <div className="card-main-line">
-  //             <p>Однушка</p>
-  //             <p>Требуется осмотр</p>
-  //           </div>
-  //           <div className="card-main-line">
-  //             <p>Двушка</p>
-  //             <p>Требуется осмотр</p>
-  //           </div>
-  //           <div className="card-main-line">
-  //             <p>Трешка</p>
-  //             <p>Требуется осмотр</p>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </CSSTransition>
-  //     <CSSTransition
-  //       in={showMessage}
-  //       nodeRef={nodeRef}
-  //       timeout={800}
-  //       classNames="back-face"
-  //       unmountOnExit
-  //     >
-  //       <div className="services-card back" ref={nodeRef}>
-  //         <Image
-  //           className="question"
-  //           src={question}
-  //           onClick={() => setShowMessage(false)}
-  //         />
-  //         <div id="card-test" className="card-title">
-  //           <h3>Другой текст</h3>
-  //         </div>
-  //         <div className="card-main">
-  //           <div className="card-main-line">
-  //             <h2>Однушка</h2>
-  //             <h2>Требуется осмотр</h2>
-  //           </div>
-  //           <div className="card-main-line">
-  //             <h2>Двушка</h2>
-  //             <h2>Требуется осмотр</h2>
-  //           </div>
-  //           <div className="card-main-line">
-  //             <h2>Трешка</h2>
-  //             <h2>Требуется осмотр</h2>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </CSSTransition>
-  //   </>
-  // );
-  constructor() {
-    super();
-    this.state = {
-      isFlipped: false,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
-    e.preventDefault();
-    this.setState((prevState) => ({ isFlipped: !prevState.isFlipped }));
-  }
-
-  render() {
-    return (
-      <ReactCardFlip isFlipped={this.state.isFlipped} >
-        <div>
-          This is the front of the card.
-          <button onClick={this.handleClick}>Click to flip</button>
+const SpinCard = () => {
+  const [isShow, setIsShow] = useState(false);
+  const nodeRef = null;
+  return (
+    //   <Image className="question" src={question} />
+    //   <div className="card-title">
+    //     <h3>
+    //       Уборка после <br /> ремонта
+    //     </h3>
+    //   </div>
+    //   <div className="card-main">
+    //     <div className="card-main-line spin-card-line">
+    //       <p>Однушка</p>
+    //       <p>Требуется осмотр</p>
+    //     </div>
+    //     <div className="card-main-line spin-card-line">
+    //       <p>Двушка</p>
+    //       <p>Требуется осмотр</p>
+    //     </div>
+    //     <div className="card-main-line spin-card-line">
+    //       <p>Трешка</p>
+    //       <p>Требуется осмотр</p>
+    //     </div>
+    //   </div>
+    <div className="spin-container">
+      <CSSTransition in={!isShow} timeout={2000} classNames="front">
+        <div className="services-card pos">
+          <Image
+            className="question"
+            src={question}
+            onClick={() => setIsShow(!isShow)}
+          />
+          <div className="card-title">
+            <h3>Tекст</h3>
+          </div>
         </div>
-
-        <div>
-          This is the back of the card.
-          <button onClick={this.handleClick}>Click to flip</button>
+      </CSSTransition>
+      <CSSTransition
+        appear={true}
+        in={!isShow}
+        timeout={2000}
+        classNames="back"
+      >
+        <div className="services-card pos">
+          <Image
+            className="question"
+            src={question}
+            onClick={() => setIsShow(!isShow)}
+          />
+          <div className="card-title">
+            <h3>Уборка после ремонта</h3>
+          </div>
+          <div className="card-main">
+            <div className="card-main-line spin-card-line">
+              <h3>Во всей квартире</h3>
+              <ul>
+                <div className="spin-list">
+                  <li>уберем строительные загрязнения</li>
+                  <li>устраним пыль и загрязнения со всех поверхностей</li>
+                  <li>очистим кондиционер и другую технику</li>
+                  <li>помоем входную и межкомнатные двери</li>
+                  <li>очистим радиаторы отопления</li>
+                  <li>устраним локальные загрязнения</li>
+                  <li>помоем пол</li>
+                  <li>помоем зеркала</li>
+                  <li>уберем пыль внутри шкафов и гардеробной</li>
+                </div>
+              </ul>
+            </div>
+            <div className="card-main-line spin-card-line">
+              <h3>Кухня</h3>
+              <ul>
+                <div className="spin-list">
+                  <li>уберем строительные загрязнения</li>
+                  <li>устраним пыль и загрязнения со всех поверхностей</li>
+                  <li>очистим кондиционер и другую технику</li>
+                  <li>помоем входную и межкомнатные двери</li>
+                  <li>очистим радиаторы отопления</li>
+                </div>
+              </ul>
+            </div>
+            <div className="card-main-line spin-card-line">
+              <h3>Ванная и туалет</h3>
+              <ul>
+                <div className="spin-list">
+                  <li>уберем строительные загрязнения</li>
+                  <li>устраним пыль и загрязнения со всех поверхностей</li>
+                  <li>очистим кондиционер и другую технику</li>
+                  <li>помоем входную и межкомнатные двери</li>
+                  <li>очистим радиаторы отопления</li>
+                </div>
+              </ul>
+            </div>
+          </div>
         </div>
-      </ReactCardFlip>
-    )
-  }
-}
+      </CSSTransition>
+    </div>
+  );
+};
 
-const spinCard = SpinCard()
+export default SpinCard;

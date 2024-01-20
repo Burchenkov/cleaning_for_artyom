@@ -1,9 +1,5 @@
 .main-services
     padding: 10% 12% 0 12%
-    p, h1, h2, h3
-        margin: 0
-    div
-        padding: 3%
     @media screen and ( max-width:  1200px)
         padding: 10% 8% 0 8%
     @media screen and ( max-width:  992px)
@@ -40,7 +36,6 @@
     display: flex
     flex-direction: column
     position: relative
-    transition: .5s
     width: 300px
     min-height: 378px
     border-radius: 55px
@@ -48,6 +43,9 @@
     background: #FFF
     box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.25)
     margin: 0 0 8% 0
+    padding: 3%
+    &:nth-child(2n)
+        margin: 0 0 0 10%
     @media screen and ( max-width:  1200px)
         min-height: 328px
     @media screen and ( max-width:  768px)
@@ -56,7 +54,7 @@
 .card-main
     display: flex
     flex-direction: column
-    justify-content: space-around
+    justify-content: stretch
     flex: 1 1
     height: 100%
 
@@ -68,6 +66,7 @@
         font-size: 24px
         font-style: normal
         font-weight: 700
+        padding: 3%
         @media screen and ( max-width:  1200px)
             font-size: 22px
 
@@ -76,6 +75,7 @@
     justify-content: space-between
     align-items: center
     padding: 10px 0
+    padding: 3%
     p
         color: #414141
         font-family: pt-serif

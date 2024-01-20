@@ -1,83 +1,78 @@
-// .front-face-enter 
-//   opacity: 1
+.front-enter
+    opacity: 0
 
-// .front-face-enter-active 
-//   transform: rotateY(90deg)
-//   transition: all .8s
+.front-enter-active
+    opacity: 1
+    transition: all 2s
+    transform: rotateY(180deg)
 
-// .front-face-exit 
-//   opacity: 1
+.front-enter-done
+    opacity: 1
 
-// .front-face-exit-active 
-//   opacity: 0
-//   transform: rotateY(-90deg)
-//   transition: all .8s
+.front-exit
+    opacity: 0
 
-// .back-face-enter 
-//   opacity: 0 !important
+.front-exit-active
+    opacity: 0
+    transform: rotateY(-180deg)
+    transition: all 2s
 
-// .back-face-enter-active 
-//   transform: rotateY(90deg)
+.front-exit-done
+    opacity: 0
 
-// .back-face-enter-done
-//   transform: scale(1.5)
-//   z-index: 20
-//   opacity: 1 !important
+.back-appear
+    opacity: 0
 
-// .back-face-exit 
-//   opacity: 1
+.back-appear-done
+    opacity: 0 !important
+    transform: rotateY(0)
 
-// .back-face-exit-active 
-//   opacity: 0
-//   transform: rotateY(-90deg)
-//   transition: all .8s
+.back-enter
+    opacity: 0
 
-.front
-  backface-visibility: hidden
+.back-enter-active
+    opacity: 0
+    transition: all 2s
+    transform: rotateY(180deg)
 
-.front-face-enter 
-	transform: rotateY(180deg)
-  
-.front-face-enter-active 
-	transition: all 1000ms ease
-	transform: rotateY(0deg)
-  
-.front-face-enter-done 
-	transform: rotateY(0deg)
-  
-  
-.front-face-exit 
-	transform: rotateY(0deg)
-  
-  
-.front-face-exit-active 
-	transform: rotateY(180deg)
-	transition: all 1000ms ease
-  
-  
-.front-face-exit-done 
-	transform: rotateY(180deg)
-  
-  
-.back-face-enter 
-	transform: rotateY(-180deg)
-  
-.back-face-enter-active 
-	transform: rotateY(0deg)
-	transition: all 1000ms ease
-  
-.back-face-enter-done 
-	transform: rotateY(0deg)
-  
-  
-.back-face-exit 
-	transform: rotateY(0deg)
-  
-  
-.back-face-exit-active 
-	transform: rotateY(-180deg)
-	transition: all 1000ms ease
-  
-  
-.back-face-exit-done 
-	transform: rotateY(-180deg)
+.back-enter-done
+    opacity: 0
+
+.back-exit
+    opacity: 0
+    z-index: 30
+
+.back-exit-active
+    opacity: 1
+    width: 595px
+    height: 595px
+    transform: rotateY(180deg)
+    transition: all 2s
+    z-index: 30
+
+.back-exit-done
+    width: 595px
+    height: 595px
+    opacity: 1
+    z-index: 30
+
+.spin-container
+    width: 300px
+    height: 378px
+    padding: 0 !important
+    position: relative
+
+.pos
+    position: absolute
+
+.spin-card-line
+    display: flex
+    flex-direction: column
+    align-items: stretch
+
+.spin-list
+    display: grid
+    grid-template: repeat(5, 1fr) / repeat(2, 1fr)
+    flex-wrap: wrap
+    justify-items: stretch
+    align-items: stretch
