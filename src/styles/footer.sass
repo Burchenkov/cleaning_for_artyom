@@ -1,0 +1,59 @@
+footer
+    background-color: #FFFF
+
+.footer
+    display: flex
+    justify-content: space-around
+    width: 100%
+    padding: 5% 10% 7% 10%
+    font-size: 16px
+    & p
+        font-family: pt-serif
+        font-style: normal
+        font-weight: 400
+        line-height: 24px
+        margin: 0 0 0.5rem 0
+    & h6
+        margin: 0 0 5% 0
+        font-weight: 700
+    @media screen and ( max-width:  1200px)
+        font-size: 14px
+        padding: 5% 7% 5% 7%
+    @media screen and ( max-width:  768px)
+        padding: 4%
+        flex-wrap: wrap
+        justify-content: space-between
+    @media screen and ( max-width:  576px)
+        flex-direction: column
+        & div
+            margin: 0 25% 7% 25%
+          
+.color
+    color: #2472BA
+
+.weight
+    font-weight: 700
+
+.rights
+    @media screen and ( max-width:  768px)
+        order: 4
+        display: flex
+        align-items: flex-end
+
+.footer-about
+    p:last-child
+        font-weight: 700
+    @media screen and ( max-width:  768px)
+        order: 3
+    @media screen and ( max-width:  576px)
+        order: 1
+
+.footer-services
+    @media screen and ( max-width:  768px)
+        order: 2
+    @media screen and ( max-width:  576px)
+        display: none
+
+.footer-contacts   
+    @media screen and ( max-width:  768px)
+        order: 1
