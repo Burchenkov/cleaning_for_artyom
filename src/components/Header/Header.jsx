@@ -7,6 +7,7 @@ import Logo from "../Logo/Logo";
 import Modal from "../Modal/Modal";
 
 
+
 const Header = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
   return (
@@ -22,13 +23,6 @@ const Header = () => {
               закажи клининг
             </button>
             <Modal isOpen={formIsOpen} onClose={() => setFormIsOpen(false)}>
-              <h4>Title form</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-                dolore amet, officia ipsa quod similique facere quis hic
-                repellat velit eveniet debitis, laborum dignissimos tempora
-                nihil voluptas deleniti possimus tempore?
-              </p>
             </Modal>
           </Column>
           <Column>

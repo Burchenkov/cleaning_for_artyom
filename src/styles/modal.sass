@@ -31,3 +31,19 @@
     padding: 40px 20px 20px 20px
     transform: translateY(-50px)
     transition: all .3s
+
+.modal--entering,
+.modal--entered
+    opacity: 1
+
+.modal--entering .my-modal-content,
+.modal--entered  .my-modal-content
+    transform: translateY(0)
+
+.modal--exiting,
+.modal--exited
+    opacity: 0    
+
+.modal--exiting .my-modal-content,
+.modal--exited .my-modal-content
+    transform: translateY(-50px)

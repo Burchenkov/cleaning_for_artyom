@@ -1,23 +1,25 @@
 import React from "react";
+import { Transition } from "react-transition-group";
 
-const Modal = ({ isOpen, onClose, children }) => {
+import Form from "../Form/Form";
+
+const Modal = ({ isOpen, onClose }) => {
+  const onWrapperClick = (e) => {
+    if (e.target.classList.contains("my-modal-wrapper")) onClose();
+  };
   return (
     <>
-      {isOpen && (
-        <div className="my-modal">
-          <div className="my-modal-wrapper">
-            <div className="my-modal-content">
-              <button
-                className="modal-close-button"
-                onClick={() => onClose()}
-              >
-                закрыть
-              </button>
-              {children}
+      <Transition in={isOpen} timeout={350} unmountOnExit={true}>
+        {(state) => (
+          <div className={`my-modal modal--${state}`}>
+            <div className="my-modal-wrapper" onClick={onWrapperClick}>
+              <div className="my-modal-content">
+                <Form onClose={onClose} />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </Transition>
     </>
   );
 };
