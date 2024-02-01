@@ -15,15 +15,12 @@ const Slider = function ({ type }) {
   useEffect(() => {
     if (type === "office") {
       setItems(vars.officeData);
-    }
-    else if(type === "window"){
-        setItems(vars.windowData)
-    }
-    else if(type === "add"){
-      setItems(vars.additionalData)
-    }
-    else{
-      setItems([])
+    } else if (type === "window") {
+      setItems(vars.windowData);
+    } else if (type === "add") {
+      setItems(vars.additionalData);
+    } else {
+      setItems([]);
     }
   }, []);
 
@@ -32,8 +29,7 @@ const Slider = function ({ type }) {
 
     if (slide + 1 > items.length) {
       slideNumber = 0;
-    }
-     else {
+    } else {
       slideNumber = (slide + 1) % items.length;
     }
 
@@ -76,11 +72,11 @@ const Slider = function ({ type }) {
           changeSlide,
           slidesCount: items.length,
           slideNumber: slide,
-          items
+          items,
         }}
       >
         <SlidesList />
-        <DropdownBtn/>
+        <DropdownBtn />
       </SliderContext.Provider>
     </div>
   );

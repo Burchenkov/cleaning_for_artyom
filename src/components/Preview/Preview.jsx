@@ -9,7 +9,6 @@ import star_bck from "../../images/main/star_bck.svg";
 import rush from "../../images/main/rush.svg";
 import rush_bck from "../../images/main/rush_bck.svg";
 
-
 const Preview = () => {
   return (
     <Row id="preview" className="main-preview row-cols-1 row-cols-md-3">

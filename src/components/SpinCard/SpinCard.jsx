@@ -5,7 +5,6 @@ import question from "../../images/main/question.svg";
 
 const SpinCard = (props) => {
   const [isShow, setIsShow] = useState(false);
-  // const nodeRef = null;
   if (props.compare) {
     return (
       <div className="spin-container">

@@ -5,9 +5,8 @@ import logo from "../../images/header/logo.svg";
 const Logo = () => {
   return (
     <>
-      {/* Переделать навигацию */}
       <a href="/">
-        <Image className="logo" src={logo} /> 
+        <Image className="logo" src={logo} />
       </a>
       <div className="subtitle">
         <p>

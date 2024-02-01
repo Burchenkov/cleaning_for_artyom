@@ -17,14 +17,14 @@ export const createUserData = async (data) => {
       if (!res.ok) {
         console.log("Error");
       }
-      return response
+      return response;
     };
     if (data) {
       request();
     }
-    return true
+    return true;
   } catch (e) {
     console.log("Catch error");
-    return false
+    return false;
   }
 };

@@ -36,7 +36,6 @@ const Services = (props) => {
             <Slider type={"window"} />
           </div>
         </div>
-        {/* <div className="services-bck"></div> */}
       </div>
     </div>
   );
