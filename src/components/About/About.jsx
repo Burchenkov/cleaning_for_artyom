@@ -4,7 +4,7 @@ import Column from "react-bootstrap/Col";
 
 const About = () => {
   return (
-    <Row className="main-about">
+    <Row id="about" className="main-about">
       <Column>
         <Row className="row-cols-md-1 about-container justify-content-center">
           <Column xs={10}>

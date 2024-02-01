@@ -6,12 +6,10 @@ import Column from "react-bootstrap/Col";
 import Logo from "../Logo/Logo";
 import Modal from "../Modal/Modal";
 
-
-
 const Header = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
   return (
-    <header>
+    <header id="header">
       <Container className="header-container">
         <Row>
           <Column className="logo-container">
@@ -22,8 +20,10 @@ const Header = () => {
             >
               закажи клининг
             </button>
-            <Modal isOpen={formIsOpen} onClose={() => setFormIsOpen(false)}>
-            </Modal>
+            <Modal
+              isOpen={formIsOpen}
+              onClose={() => setFormIsOpen(false)}
+            ></Modal>
           </Column>
           <Column>
             <Navibar />

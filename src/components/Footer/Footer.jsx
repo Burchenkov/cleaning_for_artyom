@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="footer">
       <div className="container">
         <div className="footer">
           <div className="rights">
@@ -10,10 +10,14 @@ const Footer = () => {
           </div>
           <div className="footer-about">
             <h6>О нас</h6>
-            <p>Наши приемущества</p>
-            <p>
-              <span className="color">Cвязаться с нами</span>
-            </p>
+            <a href="#preview">
+              <p>Наши приемущества</p>
+            </a>
+            <a href="#header">
+              <p>
+                <span className="color">Cвязаться с нами</span>
+              </p>
+            </a>
           </div>
           <div className="footer-services">
             <h6>Услуги</h6>

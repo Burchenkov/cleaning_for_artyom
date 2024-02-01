@@ -4,7 +4,7 @@ import SpinCard from "../SpinCard/SpinCard";
 
 const Services = (props) => {
   return (
-    <div className="main-services">
+    <div id="services" className="main-services">
       <div className="services-title">
         <h2>
           Наши <br /> услуги

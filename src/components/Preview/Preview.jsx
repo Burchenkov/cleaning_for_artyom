@@ -12,7 +12,7 @@ import rush_bck from "../../images/main/rush_bck.svg";
 
 const Preview = () => {
   return (
-    <Row className="main-preview row-cols-1 row-cols-md-3">
+    <Row id="preview" className="main-preview row-cols-1 row-cols-md-3">
       <Column>
         <Row className="warranties row-cols-2 row-cols-md-1 justify-content-center gap-md-3">
           <Row className="justify-content-center row-cols-1">
