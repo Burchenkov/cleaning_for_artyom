@@ -47,9 +47,6 @@ const Form = ({ onClose }) => {
           key={visible ? "form-move" : "exit-move"}
           in={visible}
           timeout={2000}
-          // addEndListener={(node, done) => {
-          //   node.addEventListener("transitionend", done, false);
-          // }}
           classNames="form"
         >
           {!visible ? (
