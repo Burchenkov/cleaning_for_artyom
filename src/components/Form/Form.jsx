@@ -62,61 +62,67 @@ const Form = ({ onClose }) => {
                 <h3>Укажите свои данные и наш специалсит свяжется с вами</h3>
               </legend>
               <input
+                required={true}
                 name="surname"
                 value={userSurname}
                 type="text"
                 placeholder="Фамилия"
-                maxLength="50"
+                maxlength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserSurname(e.target.value);
                 }}
               />
               <input
+                required={true}
                 name="name"
                 value={userName}
                 type="text"
                 placeholder="Имя"
-                maxLength="50"
+                maxlength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserName(e.target.value);
                 }}
               />
               <input
+                required={true}
                 name="fathname"
                 value={userFathname}
                 type="text"
                 placeholder="Отчество"
-                maxLength="50"
+                maxlength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserFathname(e.target.value);
                 }}
               />
               <input
+                required={true}
                 name="tel"
                 value={userTel}
                 type="tel"
                 placeholder="Телефон"
-                maxLength="50"
+                maxlength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserTel(e.target.value);
                 }}
               />
               <input
+                required={true}
                 name="email"
                 value={userEmail}
                 type="email"
                 placeholder="Email"
-                maxLength="50"
+                maxlength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserEmail(e.target.value);
                 }}
               />
               <select
+                required={true}
                 name="servc"
                 value={services}
                 onChange={(e) => {
@@ -138,7 +144,9 @@ const Form = ({ onClose }) => {
             <div className="exit-move" ref={nodeRef}>
               <h3>Ваша заявка успешно отправлена!</h3>
               <h6>Наш специалсит свяжется с вами</h6>
-              <button className="exit-btn" onClick={onClose}>Закрыть</button>
+              <button className="exit-btn" onClick={onClose}>
+                Закрыть
+              </button>
             </div>
           )}
         </CSSTransition>
