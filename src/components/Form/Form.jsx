@@ -59,7 +59,7 @@ const Form = ({ onClose }) => {
                 <h3>Укажите свои данные и наш специалсит свяжется с вами</h3>
               </legend>
               <input
-                required={true}
+                required
                 name="surname"
                 value={userSurname}
                 type="text"
@@ -71,7 +71,7 @@ const Form = ({ onClose }) => {
                 }}
               />
               <input
-                required={true}
+                required
                 name="name"
                 value={userName}
                 type="text"
@@ -83,7 +83,7 @@ const Form = ({ onClose }) => {
                 }}
               />
               <input
-                required={true}
+                required
                 name="fathname"
                 value={userFathname}
                 type="text"
@@ -95,7 +95,8 @@ const Form = ({ onClose }) => {
                 }}
               />
               <input
-                required={true}
+                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                required
                 name="tel"
                 value={userTel}
                 type="tel"
@@ -107,7 +108,7 @@ const Form = ({ onClose }) => {
                 }}
               />
               <input
-                required={true}
+                required
                 name="email"
                 value={userEmail}
                 type="email"
@@ -119,14 +120,14 @@ const Form = ({ onClose }) => {
                 }}
               />
               <select
-                required={true}
+                required
                 name="servc"
                 value={services}
                 onChange={(e) => {
                   setServices(e.target.value);
                 }}
               >
-                <option value="" disabled={true} selected={true}>
+                <option value="" disabled={true}>
                   Выберите услугу
                 </option>
                 <option value="После ремонта">После ремонта</option>
