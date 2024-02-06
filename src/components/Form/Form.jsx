@@ -64,7 +64,7 @@ const Form = ({ onClose }) => {
                 value={userSurname}
                 type="text"
                 placeholder="Фамилия"
-                maxlength="50"
+                maxLength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserSurname(e.target.value);
@@ -76,7 +76,7 @@ const Form = ({ onClose }) => {
                 value={userName}
                 type="text"
                 placeholder="Имя"
-                maxlength="50"
+                maxLength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserName(e.target.value);
@@ -88,7 +88,7 @@ const Form = ({ onClose }) => {
                 value={userFathname}
                 type="text"
                 placeholder="Отчество"
-                maxlength="50"
+                maxLength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserFathname(e.target.value);
@@ -101,7 +101,7 @@ const Form = ({ onClose }) => {
                 value={userTel}
                 type="tel"
                 placeholder="Телефон"
-                maxlength="50"
+                maxLength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserTel(e.target.value);
@@ -113,7 +113,7 @@ const Form = ({ onClose }) => {
                 value={userEmail}
                 type="email"
                 placeholder="Email"
-                maxlength="50"
+                maxLength="50"
                 autoComplete="off"
                 onChange={(e) => {
                   setUserEmail(e.target.value);
