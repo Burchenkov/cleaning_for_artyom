@@ -23,7 +23,7 @@ const Services = (props) => {
             <div className="card-title">
               <h3>Мытье окон</h3>
             </div>
-            <Slider type={"add"} />
+            <Slider type={"window"} />
           </div>
         </div>
         <div className="right">
@@ -33,7 +33,7 @@ const Services = (props) => {
             <div className="card-title">
               <h3>Доп услуги</h3>
             </div>
-            <Slider type={"window"} />
+            <Slider type={"add"} />
           </div>
         </div>
       </div>

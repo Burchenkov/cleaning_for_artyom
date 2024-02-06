@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer">
           <div className="rights">
-            <p>@ 2024 Все права защищены.</p>
+            <p>©2024 Все права защищены.</p>
           </div>
           <div className="footer-about">
             <h6>О нас</h6>
@@ -31,9 +31,9 @@ const Footer = () => {
           <div className="footer-contacts">
             <h6>Контакты</h6>
             <p>
-              <span className="color">ООО "Статус 62"</span>
+              <span className="color">ООО "Статус"</span>
             </p>
-            <p>Адрес: г.Рязань, ул.ЗУбковой, д.30</p>
+            <p>Адрес: г.Рязань, ул.Зубковой, д.30</p>
             <p>Пн-Вс: 9.00-21.00, без выходных</p>
             <p>
               E-mail: <span className="color">OOOStatus62@mail.ru</span>

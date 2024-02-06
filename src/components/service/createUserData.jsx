@@ -1,5 +1,5 @@
 const URI =
-  "https://api.telegram.org/bot5561216377:AAFdSv6VCHOQ_noIhLN4rJPZMh2G_sBwlI8/sendMessage?chat_id=-4180647434&parse_mode=HTML&text=";
+  "https://api.telegram.org/bot5561216377:AAFdSv6VCHOQ_noIhLN4rJPZMh2G_sBwlI8/sendMessage?chat_id=-1001639513076&parse_mode=HTML&text=";
 
 export const createUserData = async (data) => {
   let date = new Date();

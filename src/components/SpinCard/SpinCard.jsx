@@ -49,7 +49,7 @@ const SpinCard = (props) => {
               onClick={() => setIsShow(!isShow)}
             />
             <div className="card-title card-spin-title">
-              <h3>Уборка после ремонта от 140 м2</h3>
+              <h3>Уборка после ремонта</h3>
             </div>
             <div className="card-main">
               <div className="card-main-line spin-card-line">
@@ -142,7 +142,7 @@ const SpinCard = (props) => {
               onClick={() => setIsShow(!isShow)}
             />
             <div className="card-title card-spin-title">
-              <h3>Генеральная уборка от 120 м2 </h3>
+              <h3>Генеральная уборка</h3>
             </div>
             <div className="card-main">
               <div className="card-main-line spin-card-line">
